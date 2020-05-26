@@ -22,7 +22,7 @@ export class HeaderPromotionComponent implements OnInit {
 		this.productsService.getData()
 		.subscribe(resp =>{
 			
-			// console.log("resp", resp[Object.keys(resp)[1]]);
+			//console.log("resp", resp[Object.keys(resp)[1]]);
 
 			/*=============================================
 			Tomar la longitud del objeto
@@ -43,12 +43,15 @@ export class HeaderPromotionComponent implements OnInit {
 
 			let index = Math.floor(Math.random()*size);
 
+			//console.log("index", index);
+			//console.log("size", size);
+
 			/*=============================================
 			Devolvemos a la vista un banner aleatorio
 			=============================================*/
 
 			this.top_banner = JSON.parse(resp[Object.keys(resp)[index]].top_banner);
-			
+			//console.log("this.top_banner", this.top_banner);
 			this.preload = false;
 		
 
